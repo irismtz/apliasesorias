@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Tema {
+public class Empleado {
 	
 	@Id
 	@Column
-	private int idTema;
+	private int idNumEmpleado;
 	
 	@Column
-	private String tema; 
+	private String estado;
 	
 
 }
