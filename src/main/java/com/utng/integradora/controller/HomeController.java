@@ -2,30 +2,34 @@ package com.utng.integradora.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.utng.integradora.entity.Usuario;
+import com.utng.integradora.service.IEstudianteService;
 
 /**
  * 	Descripcion:	Maneja peticiones de pantalla de Login.
- * 	Autor:	Gabriel Barrón Rodríguez.
- * 	Fecha:	19 de junio del 2019
+ * 	Autor:	Equipo Asesorias Academicas.
+ * 	Fecha:	01 de Agosto del 2019
  */
 @Controller
-@RequestMapping("/home")
 public class HomeController {
 	
+	@Autowired
+	IEstudianteService estudianteService;
 	
+		
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	/**
 	 * Simplemente selecciona la pantalla de home
 	 */
-	  @RequestMapping(value = "", method = RequestMethod.GET)
+	  @RequestMapping(value = {"/","/inicio"}, method = RequestMethod.GET)
 	  public String showHome(Model model, Usuario usuario) {
 		  
 		  logger.info("Ingresando al método showHome");

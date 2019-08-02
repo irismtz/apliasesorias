@@ -1,14 +1,24 @@
 package com.utng.integradora.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Empleado {
+@Table(name="empleado")
+public class Empleado implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6002963238166905422L;
+
 	@Id
 	@Column
 	private int idNumEmpleado;
@@ -16,7 +26,7 @@ public class Empleado {
 	@Column
 	private String estado;
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name="idUsuario")
 	private Usuario idUsuario;
 	

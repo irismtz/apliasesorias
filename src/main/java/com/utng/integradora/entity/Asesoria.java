@@ -1,5 +1,6 @@
 package com.utng.integradora.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -7,10 +8,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-public class Asesoria {
+@Table(name="asesoria")
+public class Asesoria implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5908063406227810313L;
+
 	@Id
 	@Column
 	private int idAsesoria;

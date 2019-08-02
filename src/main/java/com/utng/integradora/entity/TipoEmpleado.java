@@ -1,12 +1,21 @@
 package com.utng.integradora.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class TipoEmpleado {
+@Table(name="tipoempleado")
+public class TipoEmpleado implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7302521090428168954L;
+
 	@Id
 	@Column
 	private int idTipoEmpleado;
