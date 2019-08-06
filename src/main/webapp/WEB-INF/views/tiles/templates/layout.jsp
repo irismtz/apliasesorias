@@ -23,21 +23,48 @@
 <link href="<c:url value='/resources/css/miestilo.css' />"
 	rel="stylesheet">
 </head>
+<div class="container">
 <body>
 
-	<div class="container">
+	
 		<!-- Inicio de Sección de header -->
 		<div class="row">
 			<div class="col-md-12">
-				<tiles:insertAttribute name="cabecera" />
+				<tiles:insertAttribute name="cabeceraEstudiante" />
 			</div>
 		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<tiles:insertAttribute name="cabeceraProfesor" />
+			</div>
+		</div>
+			<div class="row">
+			   <div class="col-md-12">
+				<tiles:insertAttribute name="cabeceraAdmin" />
+			  </div>
+		</div>
+		
+		
 		<!-- Fin de Sección de header -->
 
 		<!-- Inicio de Sección de Menú -->
 		<div class="row">
 			<div class="col-md-12">
-				<tiles:insertAttribute name="menu" />
+				<tiles:insertAttribute name="menuEstudiante" />
+			</div>
+		</div>
+		<!-- Inicio de Sección de Menú administrador -->
+		<div class="row">
+			<div class="col-md-12">
+				<tiles:insertAttribute name="menuAdmin" />
+			</div>
+		</div>
+		
+		<!-- Inicio de Sección de Menú Profesor -->
+		<div class="row">
+			<div class="col-md-12">
+				<tiles:insertAttribute name="menuProfesor" />
 			</div>
 		</div>
 		<!-- Fin de Sección de Menú -->
@@ -45,7 +72,7 @@
 		<!-- Inicio de Sección de body -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="container">
+				
 					<c:choose>
 						<c:when test="${error == 1}">
 							<div class="alert alert-success">
@@ -62,7 +89,7 @@
 							</div>
 						</c:when>
 					</c:choose>
-				</div>
+				
 				<tiles:insertAttribute name="body" />
 			</div>
 		</div>
@@ -75,10 +102,11 @@
 			</div>
 		</div>
 		<!-- Fin de Sección de Body -->
-	</div>
+	
 
 	<!-- Script javaScript -->
 	<script src="<c:url value='/resources/js/jquery-3.4.1.min.js' />"></script>
 	<script src="<c:url value='/resources/js/bootstrap.min.js' />"></script>
 </body>
+</div>
 </html>

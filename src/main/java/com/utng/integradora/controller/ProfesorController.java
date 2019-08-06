@@ -45,10 +45,10 @@ public class ProfesorController {
 		return "solicitar";
 	}
 	
-	@RequestMapping(value="/cancelar")
-	public String cancelar() {
+	@RequestMapping(value="/cancelarp")
+	public String cancelarp() {
 		
-		return "cancelar";
+		return "cancelarp";
 	}
 	
 	@RequestMapping(value="/asistencia")
